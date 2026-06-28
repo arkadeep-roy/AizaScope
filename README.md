@@ -1,3 +1,18 @@
+<p align="center">
+  <img src="assets/aizascope-banner.png" alt="AizaScope banner" width="850">
+</p>
+
+<h1 align="center">AizaScope</h1>
+
+<p align="center">
+  <strong>Google / Firebase API Key Exploitability Triage for Authorized Security Testing</strong>
+</p>
+
+<p align="center">
+  <em>Made by ARoy</em>
+</p>
+
+
 # AizaScope
 
 <p align="center">
