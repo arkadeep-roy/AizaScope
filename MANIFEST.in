@@ -1,0 +1,16 @@
+include README.md
+include LICENSE
+include ENDPOINT_MAP.md
+include requirements.txt
+recursive-include aizascope/data *.json
+recursive-exclude * __pycache__
+recursive-exclude * *.py[cod]
+recursive-exclude * *.egg-info
+recursive-exclude * results
+recursive-exclude * reports
+recursive-exclude * aizascope_results
+exclude keys.txt
+exclude firebase_keys.txt
+exclude findings.jsonl
+exclude scan_state.json
+exclude attack_chains.json

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aizascope"
+dynamic = ["version"]
+description = "Google/Firebase AIza API-key exploitability triage for authorized bug bounty testing"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["rich>=13.7"]
+authors = [{ name = "ARoy" }]
+license = { text = "MIT" }
+keywords = ["bug-bounty", "firebase", "google-api", "api-key", "security"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: Security",
+]
+
+[project.scripts]
+aizascope = "aizascope.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aizascope*"]
+
+[tool.setuptools.package-data]
+aizascope = ["data/*.json"]
+
+[tool.setuptools.dynamic]
+version = { attr = "aizascope.version.__version__" }

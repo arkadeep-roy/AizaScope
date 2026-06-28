@@ -1,0 +1,30 @@
+{
+  "tool": "AizaScope",
+  "schema_version": "1",
+  "default_metadata_probes": [
+    {"service": "identitytoolkit.googleapis.com", "method": "getProjectConfig", "mode": "standard"},
+    {"service": "firestore.googleapis.com", "method": "documents.list", "mode": "standard"},
+    {"service": "firestore.googleapis.com", "method": "documents.listCollectionIds", "mode": "standard"},
+    {"service": "firebaseio.com", "method": "rtdb.shallowRead", "mode": "standard"},
+    {"service": "firebasestorage.googleapis.com", "method": "objects.list", "mode": "standard"},
+    {"service": "generativelanguage.googleapis.com", "method": "models.list/files.list/cachedContents.list/batches.list", "mode": "standard"},
+    {"service": "youtube.googleapis.com", "method": "videos.list", "mode": "standard"},
+    {"service": "maps.googleapis.com", "method": "geocoding/staticmap/mapsjs.loader", "mode": "standard"}
+  ],
+  "active_probes": [
+    {"service": "youtube.googleapis.com", "method": "commentThreads/channels/playlists/playlistItems/activities/subscriptions/channelSections", "mode": "active"},
+    {"service": "maps.googleapis.com", "method": "places/directions/distancematrix/timezone/geolocation", "mode": "active"},
+    {"service": "safebrowsing.googleapis.com", "method": "threatMatches.find", "mode": "active"}
+  ],
+  "optional_active_proofs": [
+    {"service": "identitytoolkit.googleapis.com", "method": "accounts.signUp/accounts.delete", "mode": "full", "risk": "creates temporary anonymous Firebase user"},
+    {"service": "firestore/firebaseio/firebasestorage", "method": "marker write/delete proof", "mode": "full", "risk": "active write/delete proof after confirmed read/list exposure"},
+    {"service": "generativelanguage.googleapis.com", "method": "models.countTokens", "mode": "full", "risk": "active API call"},
+    {"service": "generativelanguage.googleapis.com", "method": "models.embedContent", "mode": "full", "risk": "active API call"},
+    {"service": "generativelanguage.googleapis.com", "method": "models.generateContent", "mode": "full", "risk": "generation/quota"},
+    {"service": "vision.googleapis.com", "method": "images.annotate", "mode": "full", "risk": "billable quota"},
+    {"service": "translation.googleapis.com", "method": "language.translate.v2.detect", "mode": "full", "risk": "billable quota"},
+    {"service": "language.googleapis.com", "method": "documents.analyzeSentiment", "mode": "full", "risk": "billable quota"},
+    {"service": "youtube.googleapis.com", "method": "search.list", "mode": "full", "risk": "100 quota units per request"}
+  ]
+}
