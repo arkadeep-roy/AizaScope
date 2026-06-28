@@ -61,7 +61,7 @@ AizaScope is a normal Python package. No custom installer script is required.
 ### Linux / macOS
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AizaScope.git
+git clone https://github.com/arkadeep-roy/AizaScope.git
 cd AizaScope
 
 python3 -m venv .venv
@@ -75,58 +75,8 @@ Verify the installation:
 
 ```bash
 aizascope --version
-aizascope --doctor
 ```
-
-### Windows PowerShell
-
-```powershell
-git clone https://github.com/YOUR_USERNAME/AizaScope.git
-cd AizaScope
-
-py -3 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install -e .
-```
-
-Verify the installation:
-
-```powershell
-aizascope --version
-aizascope --doctor
-```
-
-If PowerShell blocks virtual-environment activation, run:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-```
-
-### Windows CMD
-
-```cmd
-git clone https://github.com/YOUR_USERNAME/AizaScope.git
-cd AizaScope
-
-py -3 -m venv .venv
-.venv\Scripts\activate.bat
-
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install -e .
-```
-
-Verify the installation:
-
-```cmd
-aizascope --version
-aizascope --doctor
-```
-
 ---
-
 ## Quick Start
 
 ### Scan a single key
@@ -352,33 +302,6 @@ python run_checks.py
 ```
 
 This performs syntax checks, unit tests, CLI smoke checks, and read-only default behavior checks.
-
----
-
-## Repository Hygiene
-
-Do not commit API keys or scan outputs.
-
-The repository should ignore:
-
-```text
-.venv/
-__pycache__/
-*.pyc
-*.egg-info/
-aizascope_results/
-results/
-reports/
-poc/
-findings.jsonl
-scan_state.json
-summary.json
-proof_commands.json
-invalid_keys.txt
-keys.txt
-firebase_keys.txt
-*.key
-```
 
 ---
 
